@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Cuprum:400,400i&subset=cyrillic');
+
+/* Оформление параграфов */
+
+body {
+    background: #333333 url(images/18.jpg) repeat-x top left;
+}
+
+#page {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.strong-red {
+    margin-top: 400px;
+
+    color: #34cfeb8e;
+    text-align: justify;
+    text-decoration: none;
+    text-indent: 30px;
+    line-height: 40px;
+    font-family: "Cuprum", sans-serif;
+    font-style: italic;
+    font-variant: small-caps;
+}
+
+.light-blue {
+    font-weight: bold;
+    color: blue;
+    font-size: 18px;
+}
