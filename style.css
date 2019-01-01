@@ -1,9 +1,57 @@
 @import url('https://fonts.googleapis.com/css?family=Cuprum:400,400i&subset=cyrillic');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 /* Оформление параграфов */
 
 body {
-    background: #333333 url(images/18.jpg) repeat-x top left;
+    background: #333333 url(Images/18.png) repeat-x top left;
+    background-position-y: 65px;
 }
 
 #page {
@@ -13,7 +61,6 @@ body {
 
 .strong-red {
     margin-top: 400px;
-
     color: #34cfeb8e;
     text-align: justify;
     text-decoration: none;
@@ -28,4 +75,68 @@ body {
     font-weight: bold;
     color: blue;
     font-size: 18px;
+}
+#styles li{
+    color: #fff;
+    font-family: "Cuprum", sans-serif;
+    list-style: circle url(Images/norauto_logo_20x20.png) inside;
+    padding: 5px;
+    border: 1px solid #fff;
+}
+#styles li:hover {
+    background: #000;
+}
+#navigation {
+    height: 65px;
+}
+#navigation ul li {
+    float: left;
+    position: relative;
+}
+#navigation ul li a{
+    color: white;
+    padding: 0 15px;
+    font-family: "Cuprum", sans-serif;
+    text-decoration: none;
+    line-height: 65px;
+    display: block;
+    height: 65px;
+
+}
+#navigation ul li a:hover{
+    background: rgba(189, 32, 32, 0.596);
+    text-decoration: underline;
+}
+#navigation .dropdown {
+    position: absolute;
+    top: 100%;
+    width: 150px;
+    background: #333333;
+    display: none;
+}
+#navigation li:hover .dropdown{
+    display: block;
+}
+#navigation .dropdown li {
+    width: 100%;
+    height: 45px;
+}
+#navigation .dropdown li  {
+    line-height: 45px;
+    height: 45px;
+}
+#header {
+    height: 204px;
+    position: relative;
+}
+.logo {
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 0px;
+}
+.search {
+    position: absolute;
+    top: 90px;
+    right: 0px;
 }
