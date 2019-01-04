@@ -50,7 +50,6 @@ body {
 
 #page {
     width: 960px;
-    height: 2000px;
     margin: 0 auto;
     position: relative;
 }
@@ -139,6 +138,36 @@ body {
     left: 0px;
 }
 
+a[target="_blank"] {
+    color: rgb(12, 199, 137);
+}
+
+a[title~="внешняя"] {
+    color: rgb(233, 146, 15);
+}
+
+a[class|="social"] {
+    color: rgb(225, 250, 0);
+}
+
+a[title^="social"] {
+    color: rgb(12, 250, 3);
+}
+
+a[title$="icon"] {
+    color: rgb(239, 255, 13);
+}
+
+a[title*="soc"] {
+    color: rgb(239, 255, 13);
+}
+
+input[type="button"] {
+    border: 1px solid darkcyan;
+    color: aliceblue;
+    background: green;
+}
+
 .search {
     position: absolute;
     top: 90px;
@@ -169,6 +198,14 @@ body {
     float: right;
 }
 
+#article p {}
+
+#article>p {}
+
+#article .combinator+p {}
+
+#article .combinator~p {}
+
 .pseudo-class {
     color: red;
 }
@@ -191,4 +228,106 @@ body {
 
 #article li:last-child {
     color: aqua;
+}
+
+.pseodo-element::before, .pseodo-element::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.first-letter::first-letter {
+    color: rgb(224, 15, 15);
+    font-size: 20px;
+    display: block;
+    float: left;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.first-line::first-line {
+    font-size: 24px;
+    color: #fff;
+}
+
+p::selection {
+    background: #fff;
+    color: yellow;
+}
+
+.icon {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-image: url(Images/Sprite.png);
+}
+
+.icon.icon-car {
+    background-position: 0 0;
+}
+
+.icon.icon-car:hover {
+    background-position: 0 -40px;
+}
+
+.icon.icon-check {
+    background-position: -40px 0;
+}
+
+.icon.icon-check:hover {
+    background-position: -40px -40px;
+}
+
+.icon.icon-cart {
+    background-position: -80px 0;
+}
+
+.icon.icon-cart:hover {
+    background-position: -80px -40px;
+}
+
+.icon.icon-comments {
+    background-position: -120px 0;
+}
+
+.icon.icon-comments:hover {
+    background-position: -120px -40px;
+}
+
+@media print {
+    body {
+        background: #fff;
+    }
+    #navigation, .search, #sidebar {
+        display: none;
+    }
+    #article {
+        width: 100%;
+        float: none;
+    }
+}
+@media (max-width: 980px) {
+    body {
+        background: rgba(150, 96, 96, 0.801);
+    }
+    #navigation, .search, #sidebar {
+        display: none;
+    }
+    #article {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    #page {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .logo img {
+        width: 100%;
+    }
 }
